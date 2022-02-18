@@ -7,7 +7,7 @@ import '../abstract/JBProject.sol';
 
 /**
   @dev 
-  Fake Juicebox project used for testing.
+  Fake Candybox project used for testing.
 */
 contract JBFakeProject is JBProject {
   // solhint-disable-next-line no-empty-blocks
@@ -16,7 +16,7 @@ contract JBFakeProject is JBProject {
   /**
     @dev
     Example API that calls internal _fundTreasury function. The example here is an NFT mint
-    function that routes funds to a Juicebox project.
+    function that routes funds to a Candybox project.
    */
   function mint(
     uint256 _projectId,
@@ -29,7 +29,7 @@ contract JBFakeProject is JBProject {
     // Mint NFT, etc.
     // ...
 
-    // Fund Juicebox treasury.
+    // Fund Candybox treasury.
     _fundTreasury(_projectId, _amount, _beneficiary, _memo, _preferClaimedTokens, _token);
   }
 }

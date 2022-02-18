@@ -217,7 +217,7 @@ describe('JBETHPaymentTerminal::distributePayoutsOf(...)', function () {
       );
   });
 
-  it('Should distribute payout and emit event, without fee if project is Juicebox DAO', async function () {
+  it('Should distribute payout and emit event, without fee if project is Candybox DAO', async function () {
     const {
       projectOwner,
       caller,
@@ -397,7 +397,7 @@ describe('JBETHPaymentTerminal::distributePayoutsOf(...)', function () {
     ]);
   });
 
-  it('Should distribute payout minus fee and pay the fee via Juicebox DAO terminal, if using another terminal', async function () {
+  it('Should distribute payout minus fee and pay the fee via Candybox DAO terminal, if using another terminal', async function () {
     const {
       projectOwner,
       caller,
@@ -426,7 +426,7 @@ describe('JBETHPaymentTerminal::distributePayoutsOf(...)', function () {
 
     await mockJbEthPaymentTerminal.mock.pay
       .withArgs(
-        1, //JBX Dao
+        1, //CBX Dao
         projectOwner.address,
         0,
         /*preferedClaimedToken*/ false,
@@ -439,7 +439,7 @@ describe('JBETHPaymentTerminal::distributePayoutsOf(...)', function () {
       splits.map(async (split) => {
         await mockJbEthPaymentTerminal.mock.pay
           .withArgs(
-            split.projectId, //JBX Dao
+            split.projectId, //CBX Dao
             split.beneficiary,
             0,
             split.preferClaimed,
@@ -498,7 +498,7 @@ describe('JBETHPaymentTerminal::distributePayoutsOf(...)', function () {
       );
   });
 
-  it('Should distribute payout minus fee and pay the fee via the same terminal, if using Juicebox DAO terminal', async function () {
+  it('Should distribute payout minus fee and pay the fee via the same terminal, if using Candybox DAO terminal', async function () {
     const {
       projectOwner,
       caller,
@@ -650,7 +650,7 @@ describe('JBETHPaymentTerminal::distributePayoutsOf(...)', function () {
 
     await mockJbEthPaymentTerminal.mock.pay
       .withArgs(
-        1, //JBX Dao
+        1, //CBX Dao
         projectOwner.address,
         0,
         /*preferedClaimedToken*/ false,
@@ -663,7 +663,7 @@ describe('JBETHPaymentTerminal::distributePayoutsOf(...)', function () {
       splits.map(async (split) => {
         await mockJbEthPaymentTerminal.mock.pay
           .withArgs(
-            split.projectId, //JBX Dao
+            split.projectId, //CBX Dao
             split.beneficiary,
             0,
             split.preferClaimed,
@@ -759,7 +759,7 @@ describe('JBETHPaymentTerminal::distributePayoutsOf(...)', function () {
 
     await mockJbEthPaymentTerminal.mock.pay
       .withArgs(
-        1, //JBX Dao
+        1, //CBX Dao
         projectOwner.address,
         0,
         /*preferedClaimedToken*/ false,
@@ -772,7 +772,7 @@ describe('JBETHPaymentTerminal::distributePayoutsOf(...)', function () {
       splits.map(async (split) => {
         await mockJbEthPaymentTerminal.mock.pay
           .withArgs(
-            split.projectId, //JBX Dao
+            split.projectId, //CBX Dao
             split.beneficiary,
             0,
             split.preferClaimed,

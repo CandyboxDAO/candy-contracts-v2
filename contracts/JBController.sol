@@ -61,7 +61,7 @@ error ZERO_TOKENS_TO_MINT();
 
   Inherits from:
 
-  IJBController - general interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the Juicebox protocol's rules.
+  IJBController - general interface for the generic controller methods in this contract that interacts with funding cycles and tokens according to the Candybox protocol's rules.
   JBOperatable - several functions in this contract can only be accessed by a project owner, or an address that has been preconfifigured to be an operator of the project.
   ReentrencyGuard - several function in this contract shouldn't be accessible recursively.
 */

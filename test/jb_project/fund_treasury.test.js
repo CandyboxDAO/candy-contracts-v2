@@ -7,7 +7,7 @@ import jbDirectory from '../../artifacts/contracts/JBDirectory.sol/JBDirectory.j
 import jbTerminal from '../../artifacts/contracts/interfaces/IJBTerminal.sol/IJBTerminal.json';
 import errors from '../helpers/errors.json';
 
-// NOTE: `fundTreasury()` is not a public API. The example Juicebox project has a `mint()` function that calls this internally.
+// NOTE: `fundTreasury()` is not a public API. The example Candybox project has a `mint()` function that calls this internally.
 describe('JBProject::fundTreasury(...)', function () {
   const INITIAL_PROJECT_ID = 1;
   const MISC_PROJECT_ID = 7;

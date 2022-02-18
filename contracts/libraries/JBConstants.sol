@@ -3,7 +3,7 @@ pragma solidity 0.8.6;
 
 /**
   @notice
-  Global constants used across multiple Juicebox contracts.
+  Global constants used across multiple Candybox contracts.
 */
 library JBConstants {
   /** 

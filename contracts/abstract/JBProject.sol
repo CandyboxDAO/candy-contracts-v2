@@ -14,7 +14,7 @@ error PROJECT_NOT_FOUND();
 error TERMINAL_NOT_FOUND();
 
 /** 
-  @notice A contract that inherits from JuiceboxProject can use Juicebox as a business-model-as-a-service.
+  @notice A contract that inherits from CandyboxProject can use Candybox as a business-model-as-a-service.
   @dev The owner of the contract makes admin decisions such as:
     - Which address is the funding cycle owner, which can withdraw funds from the funding cycle.
     - Should this project's Tickets be migrated to a new TerminalV1. 
@@ -28,7 +28,7 @@ abstract contract JBProject is Ownable {
 
   /** 
       @param _projectId The ID of the project that should be used to forward this contract's received payments.
-      @param _directory A directory of a project's current Juicebox terminal to receive payments in.
+      @param _directory A directory of a project's current Candybox terminal to receive payments in.
     */
   constructor(uint256 _projectId, IJBDirectory _directory) {
     projectId = _projectId;

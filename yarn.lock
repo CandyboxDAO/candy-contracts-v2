@@ -9022,9 +9022,9 @@ solidity-comments-extractor@^0.0.7:
   resolved "https://registry.yarnpkg.com/solidity-comments-extractor/-/solidity-comments-extractor-0.0.7.tgz#99d8f1361438f84019795d928b931f4e5c39ca19"
   integrity sha512-wciNMLg/Irp8OKGrh3S2tfvZiZ0NEyILfcRCXCD4mp7SgK/i9gzLfhY2hY7VMCQJ3kH9UB9BzNdibIVMchzyYw==
 
-"solidity-coverage@https://github.com/jbx-protocol/solidity-coverage.git#0fcd2f608c0e3e00bf66ab62c7610f5ea553fba8":
+"solidity-coverage@https://github.com/candyboxdao/solidity-coverage.git#0fcd2f608c0e3e00bf66ab62c7610f5ea553fba8":
   version "0.7.17"
-  resolved "https://github.com/jbx-protocol/solidity-coverage.git#0fcd2f608c0e3e00bf66ab62c7610f5ea553fba8"
+  resolved "https://github.com/candyboxdao/solidity-coverage.git#0fcd2f608c0e3e00bf66ab62c7610f5ea553fba8"
   dependencies:
     "@solidity-parser/parser" "^0.13.2"
     "@truffle/provider" "^0.2.24"

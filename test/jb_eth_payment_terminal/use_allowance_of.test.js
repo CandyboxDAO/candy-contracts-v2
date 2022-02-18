@@ -20,7 +20,7 @@ describe('JBETHPaymentTerminal::useAllowanceOf(...)', function () {
   const AMOUNT_MINUS_FEES = Math.floor((AMOUNT * 200) / (DEFAULT_FEE + 200));
 
   const FUNDING_CYCLE_NUM = 1;
-  const JUICEBOX_PROJECT_ID = 1;
+  const CANDYBOX_PROJECT_ID = 1;
   const MEMO = 'test memo';
   const PROJECT_ID = 13;
   const WEIGHT = 1000;
@@ -192,7 +192,7 @@ describe('JBETHPaymentTerminal::useAllowanceOf(...)', function () {
     );
   });
 
-  it('Should send funds from overflow, without fees for Juicebox project, and emit event', async function () {
+  it('Should send funds from overflow, without fees for Candybox project, and emit event', async function () {
     const {
       beneficiary,
       CURRENCY_ETH,
@@ -205,7 +205,7 @@ describe('JBETHPaymentTerminal::useAllowanceOf(...)', function () {
     } = await setup();
 
     await mockJbEthPaymentTerminalStore.mock.recordUsedAllowanceOf
-      .withArgs(JUICEBOX_PROJECT_ID, /* amount */ AMOUNT, CURRENCY_ETH, /* minReturnedWei */ AMOUNT)
+      .withArgs(CANDYBOX_PROJECT_ID, /* amount */ AMOUNT, CURRENCY_ETH, /* minReturnedWei */ AMOUNT)
       .returns(fundingCycle, AMOUNT);
 
     // Give terminal sufficient ETH
@@ -219,7 +219,7 @@ describe('JBETHPaymentTerminal::useAllowanceOf(...)', function () {
     const tx = await jbEthPaymentTerminal
       .connect(projectOwner)
       .useAllowanceOf(
-        JUICEBOX_PROJECT_ID,
+        CANDYBOX_PROJECT_ID,
         AMOUNT,
         CURRENCY_ETH,
         /* minReturnedWei */ AMOUNT,
@@ -231,7 +231,7 @@ describe('JBETHPaymentTerminal::useAllowanceOf(...)', function () {
       .withArgs(
         /* _fundingCycle.configuration */ timestamp,
         /* _fundingCycle.number */ FUNDING_CYCLE_NUM,
-        /* _projectId */ JUICEBOX_PROJECT_ID,
+        /* _projectId */ CANDYBOX_PROJECT_ID,
         /* _beneficiary */ beneficiary.address,
         /* _withdrawnAmount */ AMOUNT,
         /* _feeAmount */ 0,
@@ -270,7 +270,7 @@ describe('JBETHPaymentTerminal::useAllowanceOf(...)', function () {
       .withArgs(
         jbEthPaymentTerminal.address,
         AMOUNT - AMOUNT_MINUS_FEES,
-        JUICEBOX_PROJECT_ID,
+        CANDYBOX_PROJECT_ID,
         ethers.BigNumber.from(0).or(ethers.BigNumber.from(projectOwner.address).shl(1)),
         /* minReturnedTokens */ 0,
         /* memo */ '',
@@ -351,7 +351,7 @@ describe('JBETHPaymentTerminal::useAllowanceOf(...)', function () {
       .withArgs(
         jbEthPaymentTerminal.address,
         AMOUNT - AMOUNT_MINUS_DISCOUNTED_FEES,
-        JUICEBOX_PROJECT_ID,
+        CANDYBOX_PROJECT_ID,
         ethers.BigNumber.from(0).or(ethers.BigNumber.from(projectOwner.address).shl(1)),
         /* minReturnedTokens */ 0,
         /* memo */ '',
@@ -430,7 +430,7 @@ describe('JBETHPaymentTerminal::useAllowanceOf(...)', function () {
       .withArgs(
         jbEthPaymentTerminal.address,
         AMOUNT - AMOUNT_MINUS_FEES,
-        JUICEBOX_PROJECT_ID,
+        CANDYBOX_PROJECT_ID,
         ethers.BigNumber.from(0).or(ethers.BigNumber.from(projectOwner.address).shl(1)),
         /* minReturnedTokens */ 0,
         /* memo */ '',
@@ -517,7 +517,7 @@ describe('JBETHPaymentTerminal::useAllowanceOf(...)', function () {
       .withArgs(
         jbEthPaymentTerminal.address,
         AMOUNT - AMOUNT_MINUS_FEES,
-        JUICEBOX_PROJECT_ID,
+        CANDYBOX_PROJECT_ID,
         ethers.BigNumber.from(0).or(ethers.BigNumber.from(projectOwner.address).shl(1)),
         /* minReturnedTokens */ 0,
         /* memo */ '',

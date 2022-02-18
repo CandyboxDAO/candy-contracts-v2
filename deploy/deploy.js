@@ -1,7 +1,7 @@
 const { ethers } = require('hardhat');
 
 /**
- * Deploys the entire Juice V2 contract suite.
+ * Deploys the entire Candy V2 contract suite.
  *
  * Example usage:
  *

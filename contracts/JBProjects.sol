@@ -60,8 +60,8 @@ contract JBProjects is ERC721Votes, Ownable, IJBProjects, JBOperatable {
     @param _operatorStore A contract storing operator assignments.
   */
   constructor(IJBOperatorStore _operatorStore)
-    ERC721('Juicebox Projects', 'JUICEBOX')
-    EIP712('Juicebox Projects', '1')
+    ERC721('Candybox Projects', 'CANDYBOX')
+    EIP712('Candybox Projects', '1')
     JBOperatable(_operatorStore)
   // solhint-disable-next-line no-empty-blocks
   {

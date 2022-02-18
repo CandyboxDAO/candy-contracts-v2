@@ -9,7 +9,7 @@ struct JBSplit {
   bool preferClaimed;
   // The percent of the whole group that this split occupies. This number is out of 1000000000.
   uint256 percent;
-  // If an allocator is not set but a projectId is set, funds will be sent to the Juicebox treasury belonging to the project who's ID is specified.
+  // If an allocator is not set but a projectId is set, funds will be sent to the Candybox treasury belonging to the project who's ID is specified.
   // Resulting tokens will be routed to the beneficiary with the unstaked token preference respected.
   uint256 projectId;
   // The role the  beneficary depends on whether or not projectId is specified, or whether or not allocator is specified.

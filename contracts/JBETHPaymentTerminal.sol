@@ -33,14 +33,14 @@ error ZERO_VALUE_SENT();
 
 /**
   @notice
-  This contract manages all inflows and outflows of funds into the Juicebox ecosystem.
+  This contract manages all inflows and outflows of funds into the Candybox ecosystem.
 
   @dev
   A project can transfer its funds, along with the power to reconfigure and mint/burn their tokens, from this contract to another allowed terminal contract at any time.
 
   Inherits from:
 
-  IJBPaymentTerminal - general interface for the methods in this contract that send and receive funds according to the Juicebox protocol's rules.
+  IJBPaymentTerminal - general interface for the methods in this contract that send and receive funds according to the Candybox protocol's rules.
   JBOperatable - several functions in this contract can only be accessed by a project owner, or an address that has been preconfifigured to be an operator of the project.
   ReentrencyGuard - several function in this contract shouldn't be accessible recursively.
 */
@@ -628,7 +628,7 @@ contract JBETHPaymentTerminal is
           );
           // Otherwise, if a project is specified, make a payment to it.
         } else if (_split.projectId != 0) {
-          // Get a reference to the Juicebox terminal being used.
+          // Get a reference to the Candybox terminal being used.
           IJBTerminal _terminal = directory.primaryTerminalOf(_split.projectId, token);
 
           // The project must have a terminal to send funds to.

@@ -4,7 +4,7 @@ pragma solidity 0.8.6;
 library JBTokens {
   /** 
     @notice 
-    The ETH token address in Juicebox is represented by 0x000000000000000000000000000000000000eeee.
+    The ETH token address in Candybox is represented by 0x000000000000000000000000000000000000eeee.
 
     @dev
     This address is guaranteed to never conflict with other tokens per the following:
